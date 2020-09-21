@@ -1,0 +1,91 @@
+{% extends 'shop/base.html'%}
+
+{% block title%}
+Checkout
+{%endblock%}
+
+{% block content %}
+<h1>Checkout</h1>
+
+<div class="order-info">
+    <div class="col-lg-4">
+        <div class="order_box">
+            <h3>Your order</h3>
+            <ul class="list">
+                <li>
+                    <a href="#">Product
+                        <span>Total</span>
+                    </a>
+                </li>
+
+                {% for item in cart %}
+                <li>
+                    <a href="#">{{ item.product.name }}
+                        <span class="middle">x  {{ item.quantity }}</span>
+                        <span class="last">${{ item.total_price|floatformat:"2" }}</span>
+                    </a>
+                </li>
+
+                {% endfor%}
+                {% if cart.coupon %}
+                <li>
+                    <a href="#">
+                        "{{ cart.coupon.code }}" ({{ cart.coupon.discount }}% off)
+                        <span> - ${{ cart.get_discount|floatformat:"2"}}</span>
+                    </a>
+
+                </li>
+                {% endif %}
+                <li>
+                    <p>Total:
+                        <span class="last"> ${{ cart.get_total_price_after_discount|floatformat:"2" }}</span>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="billing_details">
+    <div class="row">
+        <div class="col-lg-6">
+            <form class="order_form" action="." method="post" novalidate="novalidate">
+                <div class="col-md-6 form-group p_star">
+                    <input type="text" class="form-control" required id="id_first_name" name="first_name" maxlength="50"
+                           placeholder="First name"/>
+                </div>
+
+                <div class="col-md-6 form-group p_star">
+                    <input type="text" class="form-control" required id="id_last_name" name="last_name" maxlength="50"
+                           placeholder="Last name"/>
+                </div>
+
+                <div class="col-md-6 form-group p_star">
+                    <input type="email" class="form-control" required id="id_email" name="email" maxlength="254"
+                           placeholder="Email"/>
+                </div>
+
+
+                <div class="col-md-6 form-group p_star">
+                    <input type="text" class="form-control" required id="id_address" name="address" maxlength="50"
+                           placeholder="Address"/>
+                </div>
+
+
+                <div class="col-md-6 form-group p_star">
+                    <input type="text" class="form-control" required id="id_postal_code" name="postal_code"
+                           maxlength="20" placeholder="Postal code"/>
+                </div>
+
+
+                <div class="col-md-6 form-group p_star">
+                    <input type="text" class="form-control" required id="id_city" name="city" maxlength="100"
+                           placeholder="City"/>
+                </div>
+                <p><input type="submit" value="place_order">
+                </p><input type="hidden" name="csrfmiddlewaretoken"
+                           value="6i30WeLDznAiJ8CD5suhrPprGly9zglYbJb5ncTAdOQ4KnM7ibzu2NwYeFBImqtX">
+                </p>{% csrf_token %}
+            </form>
+        </div>
+    </div>
+</div>
+{%endblock%}
