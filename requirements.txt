@@ -19,6 +19,7 @@ defusedxml==0.6.0
 Django==3.0.6
 entrypoints==0.3
 flower==0.9.5
+gunicorn==20.0.4
 html5lib==1.1
 humanize==2.5.0
 idna==2.10
@@ -56,6 +57,7 @@ pyrsistent==0.16.0
 python-dateutil==2.8.1
 python-igraph==0.8.2
 pytz==2020.1
+pywin32==228
 pywinpty==0.5.7
 pyzmq==19.0.2
 requests==2.24.0
