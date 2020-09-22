@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'orders.apps.OrdersConfig',
     'payment.apps.PaymentConfig',
     'coupons.apps.CouponsConfig',
+    'django_heroku',
 ]
 
 MIDDLEWARE = [
@@ -182,4 +183,3 @@ LOGOUT_URL = 'logout'
 
 
 
-django_heroku.settings(locals())
