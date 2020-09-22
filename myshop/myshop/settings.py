@@ -179,3 +179,7 @@ EMAIL_USE_TLS = True
 LOGIN_REDIRECT_URL ='dashboard'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
+
+
+
+django_heroku.settings(locals())
