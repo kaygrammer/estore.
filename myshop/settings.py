@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
+
 import os
 
 
@@ -45,6 +46,8 @@ INSTALLED_APPS = [
     'payment.apps.PaymentConfig',
     'coupons.apps.CouponsConfig',
     'django_heroku',
+    'rosetta',
+    'django.contrib.postgres',
 ]
 
 MIDDLEWARE = [
@@ -88,8 +91,10 @@ WSGI_APPLICATION = 'myshop.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'adishop',
+        'USER': 'postgres',
+        'PASSWORD': 'samuel2007',
     }
 }
 
@@ -121,16 +126,16 @@ AUTH_PASSWORD_VALIDATORS = [
 
 from django.utils.translation import gettext_lazy as _
 
-LANGUAGE_CODE = 'en-us'
+
 
 LANGUAGES = (
     ('en', _('English')),
     ('es', _('Spanish')),
 )
 
-LOCALE_PATHS = (
-    os.path.join(BASE_DIR, 'locale/'),
-)
+LANGUAGE_CODE = 'en'
+
+LOCALE_PATHS = (os.path.join(BASE_DIR, 'locale/'),)
 
 
 TIME_ZONE = 'UTC'
@@ -166,7 +171,7 @@ Configuration.configure(
     BRAINTREE_PUBLIC_KEY,
     BRAINTREE_PRIVATE_KEY
 )
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-16 02:26+0100\n"
+"POT-Creation-Date: 2020-10-20 02:40+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,44 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\cart\forms.py:7
+msgid "Quantity"
+msgstr ""
+
+#: .\coupons\forms.py:5
+msgid "Coupon"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:100
+msgid "Home"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:101
+msgid "Latest"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:103
+msgid "Blog"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:105
+msgid "Contact"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:132
+#: .\shop\templates\shop\product\detail.html:127
+msgid "Sign out"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:134
+#: .\shop\templates\shop\product\detail.html:129
+msgid "Sign in"
+msgstr ""
+
+#: .\shop\templates\shop\product\index.html:49
+msgid "Shop Now"
+msgstr ""
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:7
 msgid "Messages"

@@ -3,7 +3,6 @@ from account.views import dashboard, user_login, register, edit
 from django.contrib.auth import views as auth_views
 
 
-#app_name = 'account'
 
 urlpatterns = [
     #path('login/', user_login, name='login'),

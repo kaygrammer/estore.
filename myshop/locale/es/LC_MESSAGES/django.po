@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-16 02:26+0100\n"
+"POT-Creation-Date: 2020-10-20 02:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,10 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: .\myshop\settings.py:129
-msgid "English"
-msgstr ""
 
-#: .\myshop\settings.py:130
+#: .\myshop\settings.py:128
+msgid "English"
+msgstr "Inglés"
+
+#: .\myshop\settings.py:129
 msgid "Spanish"
-msgstr ""
+msgstr "Español"

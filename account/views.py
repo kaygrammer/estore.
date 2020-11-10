@@ -6,6 +6,7 @@ from shop.models import Product,Category
 from django.shortcuts import render,get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .models import Profile
+from django.core.paginator import PageNotAnInteger,EmptyPage,Paginator
 
 
 @login_required()
@@ -16,9 +17,18 @@ def dashboard(request,  category_slug=None):
     if category_slug:
         category = get_object_or_404(Category, slug=category_slug)
         products = Product.objects.filter(category=category)
+    paginator = Paginator(products, 6)  # 3 posts in each page
+    page = request.GET.get('page')
+    try:
+        products = paginator.page(page)
+    except PageNotAnInteger:
+        products = paginator.page(1)
+    except EmptyPage:
+        products = paginator.page(paginator.num_pages)
     context = {'category': category,
                'categories': categories,
-               'products': products}
+               'products': products,
+               'page' : page}
     return render(request, 'shop/product/index.html', context)
 
 

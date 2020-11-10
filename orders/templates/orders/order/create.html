@@ -1,20 +1,21 @@
 {% extends 'shop/base.html'%}
+{% load i18n %}
 
 {% block title%}
 Checkout
 {%endblock%}
 
 {% block content %}
-<h1>Checkout</h1>
+<h1>{% trans 'Checkout' %}</h1>
 
 <div class="order-info">
     <div class="col-lg-4">
         <div class="order_box">
-            <h3>Your order</h3>
+            <h3>{% trans 'Your order' %}</h3>
             <ul class="list">
                 <li>
                     <a href="#">Product
-                        <span>Total</span>
+                        <span>{% trans 'Total' %}</span>
                     </a>
                 </li>
 
@@ -30,14 +31,19 @@ Checkout
                 {% if cart.coupon %}
                 <li>
                     <a href="#">
-                        "{{ cart.coupon.code }}" ({{ cart.coupon.discount }}% off)
+
+                        {%blocktrans with code=cart.coupon.code
+                        discount=cart.coupon.discount %}
+                        "{{ code }}" ({{ discount }}% off)}
+                        {% endblocktrans %}
+
                         <span> - ${{ cart.get_discount|floatformat:"2"}}</span>
                     </a>
 
                 </li>
                 {% endif %}
                 <li>
-                    <p>Total:
+                    <p>{% trans 'Total' %}:
                         <span class="last"> ${{ cart.get_total_price_after_discount|floatformat:"2" }}</span>
             </ul>
         </div>
@@ -80,7 +86,7 @@ Checkout
                     <input type="text" class="form-control" required id="id_city" name="city" maxlength="100"
                            placeholder="City"/>
                 </div>
-                <p><input type="submit" value="place_order">
+                <p><input type="submit" value="{% trans 'place order' %}">
                 </p><input type="hidden" name="csrfmiddlewaretoken"
                            value="6i30WeLDznAiJ8CD5suhrPprGly9zglYbJb5ncTAdOQ4KnM7ibzu2NwYeFBImqtX">
                 </p>{% csrf_token %}

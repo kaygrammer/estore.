@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-16 03:15+0100\n"
+"POT-Creation-Date: 2020-10-20 02:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
 #: .\orders\models.py:10
 msgid "first name"
 msgstr ""
 
 #: .\orders\models.py:11
 msgid "last name"
+msgstr ""
+
+#: .\orders\models.py:12
+msgid "e-mail"
 msgstr ""
 
 #: .\orders\models.py:13
@@ -35,4 +40,21 @@ msgstr ""
 
 #: .\orders\models.py:15
 msgid "city"
+msgstr ""
+
+#: .\orders\templates\orders\order\create.html:9
+msgid "Checkout"
+msgstr ""
+
+#: .\orders\templates\orders\order\create.html:14
+msgid "Your order"
+msgstr ""
+
+#: .\orders\templates\orders\order\create.html:18
+#: .\orders\templates\orders\order\create.html:46
+msgid "Total"
+msgstr ""
+
+#: .\orders\templates\orders\order\create.html:89
+msgid "place order"
 msgstr ""

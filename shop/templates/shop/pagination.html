@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div class="pagination">
+<span class="step-links">
+{% if page.has_previous %}
+     <div class="load_more_btn text-center">
+                            <a href="?page={{ page.previous_page_number }}" class="btn_4">Previous</a>
+                        </div>
+{% endif %}
+Page {{ page.number }} of {{ page.paginator.num_pages }}.
+{% if page.has_next %}
+    <div class="load_more_btn text-center">
+                            <a href="?page={{ page.next_page_number }}" class="btn_4">Load More</a>
+                        </div>
+{% endif %}
+</span>
+</div>

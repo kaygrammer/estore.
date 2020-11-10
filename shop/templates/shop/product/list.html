@@ -55,16 +55,16 @@
                                         </form>
                                     </div>
                                     <ul class="contact-now">     
-                                        <li>+777 2345 7886</li>
+                                        <li>+234 7067 844 463</li>
                                     </ul>
                                 </div>
                                 <div class="header-info-right">
                                    <ul>                                          
-                                        <li><a href="{% url 'dashboard' %}">My Account </a></li>
-                                       <li><a href="{% url 'shop:product_list' %}">Wish List  </a></li>
+                                        <li><a href="{% url 'edit' %}">My Account </a></li>
+                                       <li><a href="{% url 'product_list' %}">Wish List  </a></li>
                                        <li><a href="{% url 'cart:cart_detail'%}">Shopping</a></li>
                                        <li><a href="{% url 'cart:cart_detail'%}">Cart</a></li>
-                                       <li><a href="checkout.html">Checkout</a></li>
+                                       <li><a href="#">Checkout</a></li>
                                    </ul>
                                 </div>
                             </div>
@@ -85,37 +85,30 @@
                                 <div class="main-menu f-right d-none d-lg-block">
                                     <nav>                                                
                                         <ul id="navigation">                                                                                                                                     
-                                            <li><a href="index.html">Home</a></li>
-                                           <li class="hot"><a href="#">Latest</a>
-                                                <ul class="submenu">
-                                                    <li><a href="product_list.html"> Product list</a></li>
-                                                    <li><a href="single-product.html"> Product Details</a></li>
-                                                </ul>
+                                            <li><a href="{% url 'dashboard'%}">Home</a></li>
+                                           <li class="hot"><a href="{%url 'product_list'%}">Latest</a>
                                             </li>
-                                            <li><a href="blog.html">Blog</a>
-                                                <ul class="submenu">
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="single-blog.html">Blog Details</a></li>
-                                                </ul>
+                                            <li><a href="#">Blog</a>
                                             </li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="#">Contact</a></li>
                                         </ul>
                                     </nav>
                                 </div>
                             </div> 
-                             <div class="col-xl-5 col-lg-3 col-md-3 col-sm-3 fix-card">
+                            <div class="col-xl-5 col-lg-3 col-md-3 col-sm-3 fix-card">
                                 <ul class="header-right f-right d-none d-lg-block d-flex justify-content-between">
                                     <li class="d-none d-xl-block">
-                                        <div class="form-box f-right ">
-                                            <input type="text" name="Search" placeholder="Search products">
+                                              <div class="form-box f-right ">
                                             <div class="search-icon">
-                                                <i class="fas fa-search special-tag"></i>
-                                            </div>
+                                                <a href="{% url "search" %}"><i class="fas fa-search special-tag" ></i></a>
+                                                <label class="col-lg-2">
+
+                                                </label>
+                                            </div></form>
                                         </div>
                                      </li>
+                                      <li>
 
-
-                                    <li>
                                         <div class="shopping-card">
                                             <a href="{% url "cart:cart_detail" %}"><i class="fas fa-shopping-cart"></i></a>
                                         </div>
@@ -199,8 +192,9 @@
                             </div>
                         {% endfor %}
                 </div>
+
                         <div class="load_more_btn text-center">
-                            <a href="#" class="btn_3">Load More</a>
+    {% include "shop/pagination.html" with page=products %}
                         </div>
                     </div>
             </div>
@@ -222,23 +216,9 @@
                             <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering.</p>
                             <h5>- Micky Mouse</h5>
                         </div>
-                        <div class="single_client_review">
-                            <div class="client_img">
-                                <img src="assets/img/client_1.png" alt="#">
-                            </div>
-                            <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering.</p>
-                            <h5>- Micky Mouse</h5>
-                        </div>
-                        <div class="single_client_review">
-                            <div class="client_img">
-                                <img src="assets/img/client_2.png" alt="#">
-                            </div>
-                            <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering.</p>
-                            <h5>- Micky Mouse</h5>
-                        </div>
-                    </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
     <!-- client review part end -->
@@ -358,7 +338,8 @@
                  <div class="col-xl-7 col-lg-7 col-md-7">
                      <div class="footer-copy-right">
                          <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+   Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="#" target="_blank">Kaygrammer</a>
+
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>                   </div>
                  </div>
                   <div class="col-xl-5 col-lg-5 col-md-5">

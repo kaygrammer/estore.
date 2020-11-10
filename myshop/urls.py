@@ -26,7 +26,8 @@ urlpatterns = [
     path('payment/', include('payment.urls', namespace='payment')),
     path('coupons/', include('coupons.urls', namespace='coupons')),
     path('account/', include('account.urls')),
-    path('', include('shop.urls', namespace='shop')),
+    path('rosetta/', include('rosetta.urls')),
+    path('', include('shop.urls')),
 
 
 ]

@@ -1,26 +1,41 @@
-{% extends "blog/base.html" %}
-{% block title %}Search{% endblock %}
+{% extends "shop/base.html" %}
+{% load static %}
 {% block content %}
-{% if query %}
-<h1>Posts containing "{{ query }}"</h1>
-<h3>
+
+<style>
+a:link    {color:green; background-color:transparent; text-decoration:none}
+a:visited {color:pink; background-color:transparent; text-decoration:none}
+a:hover   {color:red; background-color:transparent; text-decoration:underline}
+a:active  {color:yellow; background-color:transparent; text-decoration:underline}
+</style>
+
+                            {% if query %}
+<h3>Here are list of products containing "{{ query }}"</h3>
 {% with results.count as total_results %}
-Found {{ total_results }} result{{ total_results|pluralize }}
+{{ total_results }} result{{ total_results|pluralize }} was found for {{query}}
 {% endwith %}
-</h3>
-{% for post in results %}
-<h4><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
-{{ post.body|truncatewords:5 }}
-{% empty %}
+<div class="container">
+                        <div class="row">
+                               {% for product in results %}
+                                  <div class="col-lg-3 ">
+                                        <img src="{% if product.image %}{{ product.image.url }}{%else %}{% static 'img/no_image.png' %}{% endif %}">
+                                      <h4><a href="{{ product.get_absolute_url }}" onclick="blue">{{ product.name }}</a></h4>
+                                    </div>
+
+                                                           {% empty %}
 <p>There are no results for your query.</p>
-{% endfor %}
-<p><a href="{% url "search" %}">Search again</a></p>
+                             {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+            </div>
+
+<p><a href="{% url 'search' %}">Search again</a></p>
 {% else %}
-<h1>Search for posts</h1>
+<h1>Search for products</h1>
 <form action="." method="get">
 {{ form.as_p }}
 <input type="submit" value="Search">
 </form>
 {% endif %}
 {% endblock %}
-
