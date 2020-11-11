@@ -63,6 +63,7 @@ pytz==2020.1
 pywinpty==0.5.7
 pyzmq==19.0.2
 requests==2.24.0
+rosetta==0.3
 Send2Trash==1.5.0
 six==1.15.0
 sqlparse==0.3.1
