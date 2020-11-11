@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     'payment.apps.PaymentConfig',
     'coupons.apps.CouponsConfig',
     'django_heroku',
-    'rosetta',
     'django.contrib.postgres',
 ]
 
