@@ -4,6 +4,8 @@
     <list default="true" id="565a7c73-e04f-495f-b639-e3625cd865a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myshop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/myshop/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/templates/orders/order/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/orders/templates/orders/order/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment/templates/payment/done.html" beforeDir="false" afterPath="$PROJECT_DIR$/payment/templates/payment/done.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
