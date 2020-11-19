@@ -50,6 +50,7 @@ nltk==3.5
 notebook==6.1.3
 numpy==1.19.4
 packaging==20.4
+pandas==1.1.4
 pandocfilters==1.4.2
 parso==0.7.1
 pickleshare==0.7.5
@@ -72,7 +73,6 @@ pywinpty==0.5.7
 pyzmq==19.0.2
 regex==2020.11.13
 requests==2.24.0
-rosetta==0.3
 scipy==1.5.4
 Send2Trash==1.5.0
 six==1.15.0
