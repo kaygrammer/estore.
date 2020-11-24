@@ -39,19 +39,19 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/shop/templates/shop/product" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Admin\PycharmProjects\myshop\shop\templates\shop\product" />
-      <recent name="C:\Users\Admin\PycharmProjects\myshop\myshop\shop\templates\shop\product" />
-      <recent name="C:\Users\Admin\PycharmProjects\myshop\myshop\account\templates\registration" />
-      <recent name="C:\Users\Admin\PycharmProjects\myshop\myshop\cart\templates\cart" />
-      <recent name="C:\Users\Admin\PycharmProjects\myshop\myshop\shop\static" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\PycharmProjects\myshop" />
       <recent name="C:\Users\Admin\PycharmProjects\myshop\myshop\myshop" />
       <recent name="C:\Users\Admin\PycharmProjects\myshop\myshop\orders\templates" />
       <recent name="C:\Users\Admin\PycharmProjects\myshop\myshop\shop\static" />
       <recent name="C:\Users\Admin\PycharmProjects\myshop\myshop\Max_Shop_HTML_TF_V-1.0\HTML" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\PycharmProjects\myshop\shop\templates\shop\product" />
+      <recent name="C:\Users\Admin\PycharmProjects\myshop\myshop\shop\templates\shop\product" />
+      <recent name="C:\Users\Admin\PycharmProjects\myshop\myshop\account\templates\registration" />
+      <recent name="C:\Users\Admin\PycharmProjects\myshop\myshop\cart\templates\cart" />
+      <recent name="C:\Users\Admin\PycharmProjects\myshop\myshop\shop\static" />
     </key>
   </component>
   <component name="RunDashboard">

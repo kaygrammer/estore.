@@ -92,9 +92,10 @@ WSGI_APPLICATION = 'myshop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'adishop',
-        'USER': 'postgres',
-        'PASSWORD': 'samuel2007',
+        'HOST': 'ec2-18-211-48-247.compute-1.amazonaws.com'
+        'NAME': 'dc84fjr173frf9',
+        'USER': 'xngmsnzgxpdslg',
+        'PASSWORD': '8a38c5fbeabdd53b7d8bbe56b1854a5bcd8a5d212109619b6da49feb452a522e',
     }
 }
 
@@ -157,7 +158,7 @@ Configuration.configure(
     BRAINTREE_PUBLIC_KEY,
     BRAINTREE_PRIVATE_KEY
 )
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 
